@@ -1,0 +1,21 @@
+sudo yabai --load-sa
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+
+# Layout
+yabai -m config layout bsp
+
+# Set padding (default: 0)
+yabai -m config top_padding    10
+yabai -m config bottom_padding 10
+yabai -m config left_padding   10
+yabai -m config right_padding  10
+yabai -m config window_gap     10
+
+# Floating windows are always on top (default: off)
+yabai -m config window_topmost on
+
+# Modify window shadows (default: on, options: on, off, float)
+yabai -m config window_shadow float
+
+# float system preferences
+yabai -m rule --add app="^System Preferences$" manage=off

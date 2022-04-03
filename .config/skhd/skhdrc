@@ -1,0 +1,18 @@
+# Navigation
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus south
+alt - k : yabai -m window --focus north
+alt - l : yabai -m window --focus east
+
+# Moving windows
+cmd + shift - h : yabai -m window --warp west
+cmd + shift - j : yabai -m window --warp south
+cmd + shift - k : yabai -m window --warp north
+cmd + shift - l : yabai -m window --warp east
+
+# Balance out all windows both horizontally and vertically 
+#   to occupy the same space
+cmd + shift - b: yabai -m space --balance
+
+# Float / Unfloat window
+cmd + shift - space : yabai -m window --toggle float
