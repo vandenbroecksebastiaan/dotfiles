@@ -21,6 +21,10 @@ set relativenumber
 " Don't show the current mode
 set noshowmode
 
+" Make the background transparent
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+
 " Mode Settings
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
