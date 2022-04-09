@@ -5,14 +5,34 @@ alt - k : yabai -m window --focus north
 alt - l : yabai -m window --focus east
 
 # Moving windows
-cmd + shift - h : yabai -m window --warp west
-cmd + shift - j : yabai -m window --warp south
-cmd + shift - k : yabai -m window --warp north
-cmd + shift - l : yabai -m window --warp east
+lctrl + alt - h : yabai -m window --warp west
+lctrl + alt - j : yabai -m window --warp south
+lctrl + alt - k : yabai -m window --warp north
+lctrl + alt - l : yabai -m window --warp east
+
+# Rotate windows clockwise and anticlockwise
+lctrl + alt - r: yabai -m space --rotate 270
+lctrl + alt - f: yabai -m space --rotate 90
+
+# Rotate on X and Y Axis
+lctrl + alt - x : yabai -m space --mirror x-axis
+lctrl + alt - y : yabai -m space --mirror y-axis
+
+# Resize windows
+cmd + shift - h : yabai -m window --resize left:-50:0; \
+                  yabai -m window --resize right:-50:0
+cmd + shift - j : yabai -m window --resize bottom:0:50; \
+                  yabai -m window --resize top:0:50
+cmd + shift - k : yabai -m window --resize top:0:-50; \
+                  yabai -m window --resize bottom:0:-50
+cmd + shift - l : yabai -m window --resize right:50:0; \
+                  yabai -m window --resize left:50:0
 
 # Balance out all windows both horizontally and vertically 
-#   to occupy the same space
-cmd + shift - b: yabai -m space --balance
+lctrl + alt - b: yabai -m space --balance
 
 # Float / Unfloat window
 cmd + shift - space : yabai -m window --toggle float
+
+# Enable / Disable gaps in current workspace
+lctrl + alt - g : yabai -m space --toggle padding; yabai -m space --toggle gap
