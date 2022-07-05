@@ -21,14 +21,18 @@ set relativenumber
 " Don't show the current mode
 set noshowmode
 
-" Make the background transparent
-highlight Normal ctermbg=none
-highlight NonText ctermbg=none
-
 " Mode Settings
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+
+" Shortcuts
+" Write and build latex document
+noremap <C-M> :w<BAR>LspDocumentBuild<CR>
+" Explore
+nnoremap <C-e> :Explore <CR>
+" Background
+nnoremap <C-b> :highlight Normal ctermbg=none <CR>
 
 " Cursor settings:
 
@@ -53,18 +57,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'gaalcaras/ncm-R'
 Plug 'jpalardy/vim-slime'
-Plug 'vim-python/python-syntax'
-Plug 'davidhalter/jedi-vim'
+" Plug 'vim-python/python-syntax'
+" Plug 'davidhalter/jedi-vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'mattn/vim-lsp-settings'
 Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'othree/html5.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'evanleck/vim-svelte', {'branch': 'main'}
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
 
 " For the vim airline
 let g:airline#extensions#tabline#enabled = 1
